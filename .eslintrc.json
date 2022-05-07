@@ -1,0 +1,58 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["import", "@typescript-eslint", "prettier"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "env": {
+        "es2021": true,
+        "browser": true,
+        "node": true
+    },
+    "overrides": [
+        {
+            "files": ["*.tsx"],
+            "parser": "@typescript-eslint/parser"
+        }
+    ],
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true
+            }
+        }
+    },
+    "rules": {
+        "@typescript-eslint/ban-ts-comment": "warn",
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/explicit-member-accessibility": 0,
+        "@typescript-eslint/indent": 0,
+        "@typescript-eslint/member-delimiter-style": 0,
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/no-var-requires": 0,
+        "@typescript-eslint/no-use-before-define": 0,
+        "@typescript-eslint/explicit-module-boundary-types": 0,
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never",
+                "js": "never"
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": [
+            1,
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "no-console": "warn"
+    }
+}
