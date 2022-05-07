@@ -1,6 +1,6 @@
 # p5.js + Vite + TypeScript Template
 
-Simple opioniated template with:
+Simple opinionated template with:
 
 -   p5.js ([instance mode](https://p5js.org/examples/instance-mode-instantiation.html))
 -   [Vite](https://vitejs.dev/)
